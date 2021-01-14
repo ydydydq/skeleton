@@ -1,0 +1,11 @@
+<!--components/skeleton/skeleton.wxml-->
+<view style="background: {{bgColor}};" class="skeleton-wrap" catch:touchmove="_none" wx:if="{{isShow}}">
+  <!--画圆-->
+  <view class="skeleton-item skeleton-ani" wx:for="{{skeletonRect}}" wx:key="id"
+        style="width: {{item.width}}px; height: {{item.height}}px; top: {{item.top}}px; left: {{item.left}}px;">
+  </view>
+  <!--画方-->
+  <view class="skeleton-item skeleton-ani" wx:for="{{skeletonArc}}"
+        wx:key="id" style="width: {{item.width}}px; height: {{item.height}}px; top: {{item.top}}px; left: {{item.left}}px; border-radius: {{item.width}}px;">
+  </view>
+</view>

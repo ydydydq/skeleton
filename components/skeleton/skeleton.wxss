@@ -1,0 +1,30 @@
+.skeleton-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  overflow: hidden;
+}
+.skeleton-item{
+  position: absolute;
+  background-color: #eee;
+}
+/*动画*/
+.skeleton-ani {
+  background: linear-gradient(
+          110deg,
+          transparent 40%,
+          rgba(255, 255, 255, .5) 50%,
+          transparent 60%) #eee;
+  background-size: 200%;
+  background-position-x: 180%;
+  animation: ani 1.5s linear infinite;
+}
+
+@keyframes ani {
+  to {
+    background-position-x: -20%;
+  }
+}
